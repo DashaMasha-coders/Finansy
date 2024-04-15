@@ -59,15 +59,21 @@
             button1 = new Button();
             maskedTextBox1 = new MaskedTextBox();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             tabPage2 = new TabPage();
             tabPage2.SuspendLayout();
             menuStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.FromArgb(192, 192, 255);
+            tabPage2.Controls.Add(pictureBox2);
             tabPage2.Controls.Add(comboBox2);
             tabPage2.Controls.Add(listView2);
             tabPage2.Controls.Add(label2);
@@ -77,16 +83,15 @@
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(maskedTextBox2);
             tabPage2.Controls.Add(label8);
-            tabPage2.Font = new Font("Segoe UI", 18F);
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Font = new Font("Segoe Script", 18F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            tabPage2.Location = new Point(4, 28);
             tabPage2.Margin = new Padding(5);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(5);
             tabPage2.RightToLeft = RightToLeft.Yes;
-            tabPage2.Size = new Size(792, 373);
+            tabPage2.Size = new Size(792, 369);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -101,7 +106,7 @@
             // listView2
             // 
             listView2.Columns.AddRange(new ColumnHeader[] { columnHeader4, columnHeader5, columnHeader6 });
-            listView2.Font = new Font("Segoe UI", 12F);
+            listView2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listView2.Location = new Point(299, 54);
             listView2.Name = "listView2";
             listView2.Size = new Size(477, 299);
@@ -127,9 +132,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(37, 218);
+            label2.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(12, 225);
             label2.Name = "label2";
-            label2.Size = new Size(167, 32);
+            label2.Size = new Size(213, 38);
             label2.TabIndex = 17;
             label2.Text = "Комментарий";
             // 
@@ -144,30 +150,33 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(30, 19);
+            label6.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label6.Location = new Point(12, 19);
             label6.Name = "label6";
-            label6.Size = new Size(196, 32);
+            label6.Size = new Size(238, 38);
             label6.TabIndex = 15;
             label6.Text = "Сумма расходов";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(16, 115);
+            label7.Font = new Font("Segoe Script", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label7.Location = new Point(3, 134);
             label7.Name = "label7";
-            label7.Size = new Size(235, 32);
+            label7.Size = new Size(272, 36);
             label7.TabIndex = 13;
             label7.Text = "Категория расходов";
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 9F);
+            button2.BackColor = Color.FromArgb(128, 128, 255);
+            button2.Font = new Font("Segoe Script", 9F, FontStyle.Underline, GraphicsUnit.Point, 204);
             button2.Location = new Point(75, 322);
             button2.Name = "button2";
             button2.Size = new Size(85, 31);
             button2.TabIndex = 12;
             button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // maskedTextBox2
             // 
@@ -182,43 +191,46 @@
             label8.AutoSize = true;
             label8.Location = new Point(439, 19);
             label8.Name = "label8";
-            label8.Size = new Size(193, 32);
+            label8.Size = new Size(217, 38);
             label8.TabIndex = 10;
             label8.Text = "Список доходов";
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.FromArgb(192, 192, 255);
             menuStrip1.Items.AddRange(new ToolStripItem[] { tollStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(800, 29);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // tollStripMenuItem1
             // 
             tollStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { главнаяToolStripMenuItem, счетаToolStripMenuItem });
+            tollStripMenuItem1.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             tollStripMenuItem1.Name = "tollStripMenuItem1";
-            tollStripMenuItem1.Size = new Size(53, 20);
+            tollStripMenuItem1.Size = new Size(58, 25);
             tollStripMenuItem1.Text = "Меню";
             tollStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // главнаяToolStripMenuItem
             // 
             главнаяToolStripMenuItem.Name = "главнаяToolStripMenuItem";
-            главнаяToolStripMenuItem.Size = new Size(180, 22);
+            главнаяToolStripMenuItem.Size = new Size(118, 22);
             главнаяToolStripMenuItem.Text = "Главная";
             // 
             // счетаToolStripMenuItem
             // 
             счетаToolStripMenuItem.Name = "счетаToolStripMenuItem";
-            счетаToolStripMenuItem.Size = new Size(180, 22);
+            счетаToolStripMenuItem.Size = new Size(118, 22);
             счетаToolStripMenuItem.Text = "Счета";
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             tabControl1.Location = new Point(0, 37);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -227,6 +239,8 @@
             // 
             // tabPage1
             // 
+            tabPage1.BackColor = Color.FromArgb(192, 192, 255);
+            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(listView1);
             tabPage1.Controls.Add(label5);
             tabPage1.Controls.Add(textBox1);
@@ -237,19 +251,18 @@
             tabPage1.Controls.Add(maskedTextBox1);
             tabPage1.Controls.Add(label1);
             tabPage1.Font = new Font("Segoe UI", 18F);
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(4, 28);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.RightToLeft = RightToLeft.No;
-            tabPage1.Size = new Size(792, 373);
+            tabPage1.Size = new Size(792, 369);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Доходы";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
-            listView1.Font = new Font("Segoe UI", 12F);
+            listView1.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             listView1.Location = new Point(307, 50);
             listView1.Name = "listView1";
             listView1.Size = new Size(477, 299);
@@ -275,9 +288,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(45, 214);
+            label5.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label5.Location = new Point(24, 221);
             label5.Name = "label5";
-            label5.Size = new Size(167, 32);
+            label5.Size = new Size(213, 38);
             label5.TabIndex = 8;
             label5.Text = "Комментарий";
             // 
@@ -293,9 +307,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(41, 15);
+            label4.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.Location = new Point(24, 15);
             label4.Name = "label4";
-            label4.Size = new Size(171, 32);
+            label4.Size = new Size(210, 38);
             label4.TabIndex = 6;
             label4.Text = "Сумма дохода";
             // 
@@ -313,21 +328,23 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(24, 111);
+            label3.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Location = new Point(3, 119);
             label3.Name = "label3";
-            label3.Size = new Size(210, 32);
+            label3.Size = new Size(255, 38);
             label3.TabIndex = 4;
             label3.Text = "Категория дохода";
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 9F);
+            button1.BackColor = Color.FromArgb(128, 128, 255);
+            button1.Font = new Font("Segoe Script", 9F, FontStyle.Underline, GraphicsUnit.Point, 204);
             button1.Location = new Point(83, 318);
             button1.Name = "button1";
             button1.Size = new Size(85, 31);
             button1.TabIndex = 3;
             button1.Text = "Добавить";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // maskedTextBox1
             // 
@@ -340,16 +357,36 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(464, 15);
+            label1.Font = new Font("Segoe Script", 18F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            label1.Location = new Point(443, 15);
             label1.Name = "label1";
-            label1.Size = new Size(193, 32);
+            label1.Size = new Size(217, 38);
             label1.TabIndex = 1;
             label1.Text = "Список доходов";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.изображение_2024_04_15_193153305;
+            pictureBox1.Location = new Point(733, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(51, 44);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.image;
+            pictureBox2.Location = new Point(725, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(51, 47);
+            pictureBox2.TabIndex = 20;
+            pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(800, 450);
             Controls.Add(tabControl1);
             Controls.Add(menuStrip1);
@@ -363,6 +400,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -399,5 +438,7 @@
         private MaskedTextBox maskedTextBox2;
         private Label label8;
         private ComboBox comboBox2;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
     }
 }
