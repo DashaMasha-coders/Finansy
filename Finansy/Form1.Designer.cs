@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             TabPage tabPage2;
+            comboBox2 = new ComboBox();
             listView2 = new ListView();
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
@@ -44,8 +45,6 @@
             tollStripMenuItem1 = new ToolStripMenuItem();
             главнаяToolStripMenuItem = new ToolStripMenuItem();
             счетаToolStripMenuItem = new ToolStripMenuItem();
-            категорииToolStripMenuItem = new ToolStripMenuItem();
-            валютаToolStripMenuItem = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             listView1 = new ListView();
@@ -60,7 +59,6 @@
             button1 = new Button();
             maskedTextBox1 = new MaskedTextBox();
             label1 = new Label();
-            comboBox2 = new ComboBox();
             tabPage2 = new TabPage();
             tabPage2.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -89,6 +87,16 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Segoe UI", 12F);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе и рестораны", "Образование", "Такси и транспорт", "Платежи", "Не запланированные", "Другое" });
+            comboBox2.Location = new Point(16, 173);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(213, 29);
+            comboBox2.TabIndex = 19;
             // 
             // listView2
             // 
@@ -189,7 +197,7 @@
             // 
             // tollStripMenuItem1
             // 
-            tollStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { главнаяToolStripMenuItem, счетаToolStripMenuItem, категорииToolStripMenuItem, валютаToolStripMenuItem });
+            tollStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { главнаяToolStripMenuItem, счетаToolStripMenuItem });
             tollStripMenuItem1.Name = "tollStripMenuItem1";
             tollStripMenuItem1.Size = new Size(53, 20);
             tollStripMenuItem1.Text = "Меню";
@@ -198,26 +206,14 @@
             // главнаяToolStripMenuItem
             // 
             главнаяToolStripMenuItem.Name = "главнаяToolStripMenuItem";
-            главнаяToolStripMenuItem.Size = new Size(131, 22);
+            главнаяToolStripMenuItem.Size = new Size(180, 22);
             главнаяToolStripMenuItem.Text = "Главная";
             // 
             // счетаToolStripMenuItem
             // 
             счетаToolStripMenuItem.Name = "счетаToolStripMenuItem";
-            счетаToolStripMenuItem.Size = new Size(131, 22);
+            счетаToolStripMenuItem.Size = new Size(180, 22);
             счетаToolStripMenuItem.Text = "Счета";
-            // 
-            // категорииToolStripMenuItem
-            // 
-            категорииToolStripMenuItem.Name = "категорииToolStripMenuItem";
-            категорииToolStripMenuItem.Size = new Size(131, 22);
-            категорииToolStripMenuItem.Text = "Категории";
-            // 
-            // валютаToolStripMenuItem
-            // 
-            валютаToolStripMenuItem.Name = "валютаToolStripMenuItem";
-            валютаToolStripMenuItem.Size = new Size(131, 22);
-            валютаToolStripMenuItem.Text = "Валюта";
             // 
             // tabControl1
             // 
@@ -350,16 +346,6 @@
             label1.TabIndex = 1;
             label1.Text = "Список доходов";
             // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Segoe UI", 12F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе и рестораны", "Образование", "Такси и транспорт", "Платежи", "Не запланированные", "Другое" });
-            comboBox2.Location = new Point(16, 173);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(213, 29);
-            comboBox2.TabIndex = 19;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -387,8 +373,6 @@
         private ToolStripMenuItem tollStripMenuItem1;
         private ToolStripMenuItem главнаяToolStripMenuItem;
         private ToolStripMenuItem счетаToolStripMenuItem;
-        private ToolStripMenuItem категорииToolStripMenuItem;
-        private ToolStripMenuItem валютаToolStripMenuItem;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Label label1;
