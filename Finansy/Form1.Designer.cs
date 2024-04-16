@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             TabPage tabPage2;
+            pictureBox2 = new PictureBox();
             comboBox2 = new ComboBox();
             listView2 = new ListView();
             columnHeader4 = new ColumnHeader();
@@ -38,15 +39,12 @@
             textBox2 = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            button2 = new Button();
+            but_subtr = new Button();
             maskedTextBox2 = new MaskedTextBox();
             label8 = new Label();
-            menuStrip1 = new MenuStrip();
-            tollStripMenuItem1 = new ToolStripMenuItem();
-            главнаяToolStripMenuItem = new ToolStripMenuItem();
-            счетаToolStripMenuItem = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            pictureBox1 = new PictureBox();
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -56,18 +54,16 @@
             label4 = new Label();
             comboBox1 = new ComboBox();
             label3 = new Label();
-            button1 = new Button();
+            but_add = new Button();
             maskedTextBox1 = new MaskedTextBox();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            bank_account = new Button();
             tabPage2 = new TabPage();
             tabPage2.SuspendLayout();
-            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // tabPage2
@@ -80,7 +76,7 @@
             tabPage2.Controls.Add(textBox2);
             tabPage2.Controls.Add(label6);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(button2);
+            tabPage2.Controls.Add(but_subtr);
             tabPage2.Controls.Add(maskedTextBox2);
             tabPage2.Controls.Add(label8);
             tabPage2.Font = new Font("Segoe Script", 18F, FontStyle.Underline, GraphicsUnit.Point, 204);
@@ -92,6 +88,15 @@
             tabPage2.Size = new Size(792, 369);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.image;
+            pictureBox2.Location = new Point(725, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(51, 47);
+            pictureBox2.TabIndex = 20;
+            pictureBox2.TabStop = false;
             // 
             // comboBox2
             // 
@@ -167,16 +172,17 @@
             label7.TabIndex = 13;
             label7.Text = "Категория расходов";
             // 
-            // button2
+            // but_subtr
             // 
-            button2.BackColor = Color.FromArgb(128, 128, 255);
-            button2.Font = new Font("Segoe Script", 9F, FontStyle.Underline, GraphicsUnit.Point, 204);
-            button2.Location = new Point(75, 322);
-            button2.Name = "button2";
-            button2.Size = new Size(85, 31);
-            button2.TabIndex = 12;
-            button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = false;
+            but_subtr.BackColor = Color.FromArgb(128, 128, 255);
+            but_subtr.Font = new Font("Segoe Script", 9F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            but_subtr.Location = new Point(75, 322);
+            but_subtr.Name = "but_subtr";
+            but_subtr.Size = new Size(85, 31);
+            but_subtr.TabIndex = 12;
+            but_subtr.Text = "Добавить";
+            but_subtr.UseVisualStyleBackColor = false;
+            but_subtr.Click += but_subtr_Click;
             // 
             // maskedTextBox2
             // 
@@ -191,40 +197,9 @@
             label8.AutoSize = true;
             label8.Location = new Point(439, 19);
             label8.Name = "label8";
-            label8.Size = new Size(217, 38);
+            label8.Size = new Size(235, 38);
             label8.TabIndex = 10;
-            label8.Text = "Список доходов";
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.BackColor = Color.FromArgb(192, 192, 255);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tollStripMenuItem1 });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 29);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // tollStripMenuItem1
-            // 
-            tollStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { главнаяToolStripMenuItem, счетаToolStripMenuItem });
-            tollStripMenuItem1.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            tollStripMenuItem1.Name = "tollStripMenuItem1";
-            tollStripMenuItem1.Size = new Size(58, 25);
-            tollStripMenuItem1.Text = "Меню";
-            tollStripMenuItem1.Click += toolStripMenuItem1_Click;
-            // 
-            // главнаяToolStripMenuItem
-            // 
-            главнаяToolStripMenuItem.Name = "главнаяToolStripMenuItem";
-            главнаяToolStripMenuItem.Size = new Size(118, 22);
-            главнаяToolStripMenuItem.Text = "Главная";
-            // 
-            // счетаToolStripMenuItem
-            // 
-            счетаToolStripMenuItem.Name = "счетаToolStripMenuItem";
-            счетаToolStripMenuItem.Size = new Size(118, 22);
-            счетаToolStripMenuItem.Text = "Счета";
+            label8.Text = "Список расходов";
             // 
             // tabControl1
             // 
@@ -247,7 +222,7 @@
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(comboBox1);
             tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(but_add);
             tabPage1.Controls.Add(maskedTextBox1);
             tabPage1.Controls.Add(label1);
             tabPage1.Font = new Font("Segoe UI", 18F);
@@ -258,6 +233,15 @@
             tabPage1.Size = new Size(792, 369);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Доходы";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.изображение_2024_04_15_193153305;
+            pictureBox1.Location = new Point(733, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(51, 44);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // listView1
             // 
@@ -335,16 +319,17 @@
             label3.TabIndex = 4;
             label3.Text = "Категория дохода";
             // 
-            // button1
+            // but_add
             // 
-            button1.BackColor = Color.FromArgb(128, 128, 255);
-            button1.Font = new Font("Segoe Script", 9F, FontStyle.Underline, GraphicsUnit.Point, 204);
-            button1.Location = new Point(83, 318);
-            button1.Name = "button1";
-            button1.Size = new Size(85, 31);
-            button1.TabIndex = 3;
-            button1.Text = "Добавить";
-            button1.UseVisualStyleBackColor = false;
+            but_add.BackColor = Color.FromArgb(128, 128, 255);
+            but_add.Font = new Font("Segoe Script", 9F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            but_add.Location = new Point(83, 318);
+            but_add.Name = "but_add";
+            but_add.Size = new Size(85, 31);
+            but_add.TabIndex = 3;
+            but_add.Text = "Добавить";
+            but_add.UseVisualStyleBackColor = false;
+            but_add.Click += but_add_Click;
             // 
             // maskedTextBox1
             // 
@@ -364,23 +349,16 @@
             label1.TabIndex = 1;
             label1.Text = "Список доходов";
             // 
-            // pictureBox1
+            // bank_account
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.изображение_2024_04_15_193153305;
-            pictureBox1.Location = new Point(733, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(51, 44);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.image;
-            pictureBox2.Location = new Point(725, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(51, 47);
-            pictureBox2.TabIndex = 20;
-            pictureBox2.TabStop = false;
+            bank_account.Font = new Font("Segoe UI", 18F);
+            bank_account.Location = new Point(294, 8);
+            bank_account.Name = "bank_account";
+            bank_account.Size = new Size(180, 49);
+            bank_account.TabIndex = 21;
+            bank_account.Text = "Счет";
+            bank_account.UseVisualStyleBackColor = true;
+            bank_account.Click += bank_account_Click;
             // 
             // Form1
             // 
@@ -388,34 +366,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(800, 450);
+            Controls.Add(bank_account);
             Controls.Add(tabControl1);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem tollStripMenuItem1;
-        private ToolStripMenuItem главнаяToolStripMenuItem;
-        private ToolStripMenuItem счетаToolStripMenuItem;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Label label1;
-        private Button button1;
+        private Button but_add;
         private MaskedTextBox maskedTextBox1;
         private Label label3;
         private ComboBox comboBox1;
@@ -434,11 +403,12 @@
         private TextBox textBox2;
         private Label label6;
         private Label label7;
-        private Button button2;
+        private Button but_subtr;
         private MaskedTextBox maskedTextBox2;
         private Label label8;
         private ComboBox comboBox2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private Button bank_account;
     }
 }
